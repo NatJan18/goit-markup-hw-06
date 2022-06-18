@@ -2,6 +2,7 @@
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
+    --accent-color-dark: #1882d7;
     --primary-white-color: #FFFFFF;
     --secondary-whit-color: rgba(255, 255, 255, 0.6);
     --white-rgba-color: rgba(255, 255, 255, 0.1);
@@ -11,12 +12,14 @@
     --header-border-color: #ECECEC;
     --portfolio-border-color: #EEEEEE;
     --hero-bg-color: #c4c4c4;
-    --social-links-main-color: AFB1B8;
-    --klients-main-color: AFB1B8;
+    --social-links-main-color: #AFB1B8;
+    --klients-main-color: #AFB1B8;
     --btn-bg-hover-color: #188CE8;
     --klients-color: #AFB1B8;
     --bg-color-icon: rgba(255, 255, 255, .1);
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --border-color: rgba(33, 33, 33, 0.2);
+    --placeholder-color: rgba(117, 117, 117, 0.5);
 }
 
 html {
@@ -730,10 +733,160 @@ display: flex;
 }
 
 .modal-text {
-    color:var(--title-text-color);
+    /* position: absolute; */
+    width: 448px;
+    height: 23px;
+    left: 576px;
+    top: 261px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
     text-align: center;
-    padding-top: 100px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
 }
+
+.form-area {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+
+    user-select: none;
+}
+
+.form-area-malevich {
+    display: block;
+    padding-left: 65px;
+
+}
+
+.form-option {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--title-text-color);
+    transition-property: fill;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.input {
+    height: 40px;
+    max-width: 100%;
+    padding: 11px;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition-property: border-color;
+    transition: var(--transition);
+}
+
+.input:hover,
+.input:focus {
+    border-color: var(--accent-color);
+}
+
+.input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.input-icon {
+    padding-left: 42px;
+}
+
+.input-icon:hover .form-icon,
+.input-icon:focus .form-icon {
+    fill: var(--accent-color);
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.malevich-icon{
+    fill: transparent;
+    background-color: #fff;
+    border: 2px solid var(--title-text-color);
+    border-radius: 3px;
+
+    margin-right: 3px;
+    vertical-align: text-top;
+
+    transition-property: fill, box-shadow, background-color, border-color, opacity;
+    transition: var(--transition);
+}
+
+.checkbox:focus .malevich-icon {
+    box-shadow: 0 0 0 2px var(--accent-color-dark);
+}
+
+.malevich-icon > .use {
+    transform: scale(1.2) rotate(-45deg);
+    transform-origin: center;
+
+    transition-property: transform;
+    transition: var(--transition);
+}
+
+.button-form {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    fill: var(--primary-white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button-form:hover,
+.button-form:focus {
+    background-color: var(--accent-color-dark);
+}
+
+.modal-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.modal-link:hover,
+.modal-link:focus {
+    color: var(--accent-color-dark);
+}
+
+.data-form-text {
+    margin-bottom: 20px;
+}
+
+
 
 /* Portfolio page */
 .section-portfolio {

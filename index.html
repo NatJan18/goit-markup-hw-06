@@ -409,16 +409,57 @@
     
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <h3 class="modal-text">Vita est motus <br>
-            Scientia est cibus</h3>
             <button class="modal-btn" type="button" data-modal-close>
                 <svg class="modal-icon" width="11" height="11">
                     <use href="./img/sprite.svg#icon-x"></use>
                 </svg>
             </button>
+            <h3 class="modal-text">Оставьте свои данные, мы вам перезвоним</h3>
+            <form class="js-speaker-form data-form">
+                <label class="form-area">
+                    <span class="form-option">Имя</span>
+                    <input class="input input-icon" name="name" type="text" required />
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./img/sprite.svg#icon-human" />
+                    </svg>
+                </label>
+            
+                <label class="form-area">
+                    <span class="form-option">Телефон</span>
+                    <input class="input input-icon" name="telephone" type="telephone" required />
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./img/sprite.svg#icon-phone" />
+                    </svg>
+                </label>
+            
+                <label class="form-area">
+                    <span class="form-option">Почта</span>
+                    <input class="input input-icon" name="email" type="email" required />
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./img/sprite.svg#icon-letter" />
+                    </svg>
+                </label>
+            
+                <label class="form-area data-form-text">
+                    <span class="form-option">Комментарий</span>
+                    <textarea class="input input-textarea" name="text" placeholder="Введите текст"></textarea>
+                </label>
+            
+                <label class="form-area form-area-malevich">
+                    <input class="checkbox" type="checkbox" name="comment" value="1" required />
+                    <svg class="malevich-icon" width="16" height="15">
+                        <use class="use" href="./img/sprite.svg#icon-empty-malevich" />
+                    </svg>
+                    Соглашаюсь с рассылкой и принимаю
+                    <a class="link modal-link" href="">Условия договора</a>
+                </label>
+            
+                <button class="button button-form" type="submit">Отправить</button>
+            </form>
         </div>
     </div>
 
     <script src="./js/modaj.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
