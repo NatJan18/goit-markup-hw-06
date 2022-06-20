@@ -355,7 +355,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-flex">
-                <div class="footer-adress">
+                <div class="footer-item">
                     <a class="logo" href="">Web<span class="logo-footer">Studio</span></a>
                     <address class="address-top">
                         <ul class="address list">
@@ -368,7 +368,7 @@
                         </ul>
                     </address>
                 </div>
-                <div class="do-flex">
+                <div class="footer-item">
                         <h2 class="do-title">Присоединяйтесь</h2>
                         <ul class="social-list list">
                             <li class="social-item">
@@ -401,24 +401,24 @@
                             </li>
                         </ul>
                 </div>
+                <div class="footer-item subscription">
+                    <h3 class="footer-item-title">Подпишитесь на рассылку</h3>
+                    <form class="js-speaker-form form subscription-form">
+                        <label class="form-area">
+                            <input class="input form-input subscription-input" type="email" name="email" placeholder="E-mail"
+                                required />
+                        </label>
+                        <button class="button button-form" type="submit">
+                            Подписаться
+                            <svg class="button-icon" width="24" height="24">
+                                <use href="./img/sprite.svg#icon-send" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="footer-item subscription">
-            <h3 class="footer-item-title">Подпишитесь на рассылку</h3>
-            <form class="js-speaker-form form subscription-form">
-                <label class="form-area">
-                    <input class="input input-1 input-2 form-input subscription-input" type="email" name="email"
-                        placeholder=" " required />
-                    <span class="form-label subscription-label">E-mail</span>
-                </label>
-                <button class="button button-form" type="submit">
-                    Подписаться
-                    <svg class="button-icon" width="24" height="24">
-                        <use href="./img/sprite.svg#icon-send" />
-                    </svg>
-                </button>
-            </form>
-        </div>
+        
     </footer>
 
     <!--Backdrop-->
@@ -459,11 +459,11 @@
                 </label>
                 <label class="form-area form-area-malevich">
                     <input class="checkbox" type="checkbox" name="comment" value="1" required />
-                    <svg class="malevich-icon" width="16" height="15">
-                        <use class="use" href="./img/sprite.svg#icon-empty-malevich" />
-                    </svg>
-                    Соглашаюсь с рассылкой и принимаю
-                    <a class="link modal-link" href="">Условия договора</a>
+                    <span class="check"><svg class="malevich-icon" width="16" height="15">
+                        <use class="use" href="./img/sprite.svg#icon-check" />
+                    </svg></span>
+                    <span>Соглашаюсь с рассылкой и принимаю 
+                    <a class="link modal-link" href="">Условия договора</a></span>
                 </label>
             
                 <button class="button button-form" type="submit">Отправить</button>
